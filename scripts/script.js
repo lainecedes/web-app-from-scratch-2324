@@ -56,3 +56,26 @@ for (var i = 0; i < profiles.length; i++) {
     console.log(profile.name + " is " + profile.age + " years old.");
   }
   
+
+//   Tijd op NookPhone laten zien
+
+function currentPhoneTime() {
+    // haal actuele tijd op
+    const now = new Date();
+
+    const hours = now.getHours();
+    const minutes = now.getMinutes();
+
+    // als minuten en uren minder zijn dan 10 dan 0 ervoor
+    const hour = hours < 10 ? "0" + hours : hours;
+    const minute = minutes < 10 ? "0" + minutes : minutes;
+    
+    const currentTime = hour + ":" + minute;
+
+    console.log(currentTime);
+
+    document.getElementById("container");
+    document.getElementById("screenTime").innerHTML = currentTime;
+}
+
+currentPhoneTime();
