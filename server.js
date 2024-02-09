@@ -25,7 +25,7 @@ console.log("API Key:", apiKey);
 // };
 
 // de static files met express.static
-app.use(express.static('/docs'));
+app.use(express.static('docs'));
 
 
 // index.html + Your API key-protected endpoint
