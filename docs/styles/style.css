@@ -30,9 +30,9 @@ button, summary {
 /* code */
 
 body {
-    background-image: url(/docs/images/stardewbackground.png);
+    background-image: url(/images/stardewbackground.png);
     background-repeat: no-repeat;
-    cursor: url('/docs/images/cursor.png'), pointer;
+    cursor: url('/images/cursor.png'), pointer;
 }
 
 /* Section 1 - avatar grid and icons */
@@ -167,7 +167,7 @@ section:nth-of-type(2) p:nth-of-type(3) {
 /* section met letter bio */
 
 section:nth-of-type(3) {
-    background: url(/docs/images/letter-sprite.png);
+    background: url(/images/letter-sprite.png);
     background-size: cover;
     padding: 1em;
     padding-bottom: 3em;
