@@ -9,7 +9,6 @@ const app = express();
 dotenv.config({ path: "./.env" });
 
 const apiKey = process.env.API_KEY; // retrieve API key from .env file
-console.log("API Key:", apiKey);
 
 
 
