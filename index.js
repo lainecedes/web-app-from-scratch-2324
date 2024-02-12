@@ -4,7 +4,6 @@ const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch
 const port = process.env.PORT || 3000; // port
 const app = express();
 const bodyParser = require('body-parser');
-const serverless = require('serverless-http');
 
 // dotenv configuration
 // require("dotenv").config({ path: "/.env" });
@@ -55,5 +54,4 @@ app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 
-// module.exports = app; // Export the Express app
-module.exports.handler = serverless(app);
+module.exports = app; // Export the Express app
