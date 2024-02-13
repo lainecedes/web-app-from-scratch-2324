@@ -15,47 +15,36 @@ function closeLetter() {
     openClick.classList.remove("buttonOpen");
 }
 
-// JSON algemene data 
-
-var profiles = [
-    {
-        "name": "Elaine",
-        "age": "22",
-        "username": "lainecedes",
-        "bio": "Hey en welkom op mijn pagina! Ik ben Elaine en mijn favoriete videogames zijn Stardew Valley, Animal Crossing en Mario Kart.",
-        "switchCode": "SW-0538-7208-9985",
-        "favoriteGames": [
-                            {"game": "Stardew Valley"}, 
-                            {"game": "Animal Crossing"}, 
-                            {"game": "Mario Kart"}
-        ]
-    },
-]
 
 function userInfo() {
     var userSection = document.getElementById("user");
     var bioSection = document.getElementById("bio");
-    var user = profiles[0];
+    var user;
 
-    // haal hier de id op van elke element in user section en laat JSON data zien
-    document.getElementById("userName").innerHTML = user.name;
-    document.getElementById("userAge").innerHTML = user.age;
-    document.getElementById("userUsername").innerHTML = user.username;
+    fetch("./data/data.json")
+	.then((response) => response.json())
+	.then((data) => {
+		user = data;
+		console.log(user);
 
-    // zelfde voor bio section
-    document.getElementById("userBio").innerHTML = user.bio;
+        // haal hier de id op van elke element in user section en laat JSON data zien
+        document.getElementById("userName").innerHTML = user.name;
+        document.getElementById("userAge").innerHTML = user.age;
+        document.getElementById("userUsername").innerHTML = user.username;
+
+        // zelfde voor bio section
+        document.getElementById("userBio").innerHTML = user.bio;
+    })
+
+    .catch((error) => {
+        console.error('Error fetching data:', error);
+    });
 
     // misschien switch code erbij in de bio? kijk ff later
 }
+
 userInfo();
 
-
-// test om te zien of mn data werkt
-for (var i = 0; i < profiles.length; i++) {
-    var profile = profiles[i];
-    console.log(profile.name + " is " + profile.age + " years old.");
-  }
-  
 
 //   Tijd op NookPhone laten zien
 
@@ -79,3 +68,16 @@ function currentPhoneTime() {
 }
 
 currentPhoneTime();
+
+// data fetch API
+
+document.getElementById('villagerButton').addEventListener('click', fetchData);
+
+
+
+function fetchData() {
+    fetch('http://localhost:3000/')
+      .then(response => response.json())
+      .then(data => displayData(data))
+      .catch(error => console.error('Error fetching data:', error));
+  }

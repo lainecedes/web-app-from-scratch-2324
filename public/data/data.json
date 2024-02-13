@@ -1,0 +1,12 @@
+{
+    "name": "Elaine",
+    "age": "22",
+    "username": "lainecedes",
+    "bio": "Hey en welkom op mijn pagina! Ik ben Elaine en mijn favoriete videogames zijn Stardew Valley, Animal Crossing en Mario Kart.",
+    "switchCode": "SW-0538-7208-9985",
+    "favoriteGames": [
+                        {"game": "Stardew Valley"}, 
+                        {"game": "Animal Crossing"}, 
+                        {"game": "Mario Kart"}
+    ]
+}

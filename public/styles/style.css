@@ -35,6 +35,12 @@ body {
     cursor: url('/images/cursor.png'), pointer;
 }
 
+h1 {
+    font-family: "Pixelify Sans", sans-serif;
+    color: var(--color-orange);
+    text-align: center;
+}
+
 /* Section 1 - avatar grid and icons */
 
 section:nth-of-type(1) {
@@ -45,7 +51,7 @@ section:nth-of-type(1) {
     grid-template-areas: 
     "sidebar avatar ." ;
 
-    margin: 0;
+    margin: 4em 0 0 0;
     padding: 0 1.5em 0 1.5em;
 }
 
@@ -71,8 +77,8 @@ section:nth-of-type(1) ul {
     padding: 0;
 
     /* sizing ul */
-    width: 86%;
-    height: 72%;
+    width: 5em;
+    height: 17.9em;
     background-color: var(--color-orange);
     /* border: solid transparent; */
 
@@ -209,12 +215,12 @@ section:nth-of-type(4) #NookPhone #container {
     /* centreer phone */
     right: 1.4em;
 
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr 1fr 5fr 1fr 2fr 0.5fr; 
+    grid-template-columns: 0.2fr 2fr 0.3fr;
+    grid-template-rows: 1fr 0.5fr 6fr 0.5fr; 
 
     background-color: var(--color-white);
     max-width:23em;
-    height: 30em;
+    height: 33em;
     border-radius: 5em;
 }
 
@@ -222,7 +228,7 @@ section:nth-of-type(4) #NookPhone #container {
 section:nth-of-type(4) #NookPhone #container img:nth-of-type(1) {
     position: relative;
     top: 1.1em;
-    left: 2em;
+    left: 2.5em;
     width: 3em;
     height: 1.3em;
 }
@@ -233,7 +239,7 @@ section:nth-of-type(4) #NookPhone #container img:nth-of-type(2) {
 
     position: relative;
     top: 1em;
-    right: 0.5em;
+    right: 2em;
 
     width: 1.4em;
     height: 1.4em;
@@ -244,25 +250,122 @@ section:nth-of-type(4) #NookPhone #container p {
     padding: 0;
 }
 
-section:nth-of-type(4) #NookPhone #container p:nth-of-type(1) {
+section:nth-of-type(4) #NookPhone #container > p:nth-of-type(1) {
     position: relative;
-    font-size: 0.8em;
+    font-size: 1em;
     color: var(--cellular-color);
     top: 1.3em;
-    right: -5em;
+    right: -7em;
 
     grid-column: 2/-2;
     grid-row: 1;
 }
 
-section:nth-of-type(4) #NookPhone #container p:nth-of-type(2) {
+section:nth-of-type(4) #NookPhone #container > p:nth-of-type(2) {
+    font-size: 1.4em;
     color: var(--phone-font-color);
-    align-items: center;
+    text-align: center;
     white-space: nowrap;
     grid-column: 2/-2;
 }
 
-section:nth-of-type(4) #NookPhone #slideshow {
-    position: relative;
-    z-index: 1;
+/* Villagers design slideshow */
+
+section:nth-of-type(4) #NookPhone #container ul {
+    display: flex;
+
+    grid-column: 2/-2;
+    grid-row: 3/4;
+
+    overflow-x: auto;
+    scroll-snap-align: center;
+	scroll-behavior: smooth;
+	scrollbar-width: none; /* Firefox */
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
+
+section:nth-of-type(4) #NookPhone #container ul li {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 2em 1fr 0.5fr 1fr;
+    gap: 1em;
+ 
+    text-decoration: none;
+    list-style-type: none;
+
+    margin: 0 2em 0 2em;
+    padding: 0;
+}
+
+/* Villager images */
+section:nth-of-type(4) #NookPhone #container ul li img:nth-of-type(1) {
+    position: relative;
+    left: 0.5em;
+
+    grid-column: 2/3;
+    grid-row: 2/3;
+    width: 7em;
+    height: 12em;
+}
+
+
+/* algemene p's */
+section:nth-of-type(4) #NookPhone #container ul li p {
+    text-align: center;
+    font-size: 1em;
+}
+/* naam villager */
+section:nth-of-type(4) #NookPhone #container ul li p:nth-of-type(1) {
+    text-align: center;
+    font-size: 1.7em;
+    font-weight: bold;
+    
+    order: -1;
+    grid-column: 1/4;
+}
+
+/* personality and gender */
+section:nth-of-type(4) #NookPhone #container ul li p:nth-of-type(2) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+/* birthday */
+section:nth-of-type(4) #NookPhone #container ul li p:nth-of-type(3) {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+section:nth-of-type(4) #NookPhone #container ul li p:nth-of-type(4) {
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+
+/* quote */
+section:nth-of-type(4) #NookPhone #container ul li p:nth-of-type(5) {
+    font-weight: 800;
+    grid-column: 1/4;
+    grid-row: 4/5;
+ }
+
+
+ /* -------------- */
+ /* responsiveness */
+ /* -------------- */
+
+ @media screen and (min-width: 1000px) {
+    /* avatar on page */
+    section:nth-of-type(1) button img:nth-of-type(1) {
+        max-width: 50%;
+    }
+
+    /* algemene info grid */
+    section:nth-of-type(2) {
+        padding: 0;
+        margin: 2em 8em 0 8em;
+    }
+    
+  }

@@ -1,6 +1,6 @@
-# Web App From Scratch @cmda-minor-web 2023 - 2024
+# Web App From Scratch 23/24
 
-In dit vak gaan we een web applicatie bouwen en leren hoe deze werken door zo min mogelijk libraries, frameworks of
+In this course,  gaan we een web applicatie bouwen en leren hoe deze werken door zo min mogelijk libraries, frameworks of
 andere bronnen te importen (vanilla) en zoveel mogelijk het browser platform te gebruiken door middel van HTML, CSS &
 JavaScript.    
 Het eindresultaat is een modulaire, single page web app (SPA), beoordeeld op jouw niveau en eigen leerdoelen.    
@@ -12,40 +12,51 @@ Nog nooit heb je zo snel kunnen prototypen als nadat je hebt leren werken met de
 Daarnaast zal je tijdloze kennis opdoen over het de aard en het gebruik van data, datastructuren, algoritmes, libraries,
 frameworks en de werking van het web.
 
-## Assignment
-1. Bouw je eigen SPA/WebSite met externe data van een API, minimaal 1 micro interactie.
-2. Een TeamApp met een verzameling van alle losse websites van je teamleden
+## What is this web app about?
+This is an web app where I will be showcasing my personalized profile in a theme of my favorite games, with Stardew Valley being the most prominent. 
 
----
+It showcases:
+1. Avatar
+2. Personal information such as name, age, bio and Github username retrieved from a JSON data format
+3. Item interface with icons of my favorite games:
+    - Mario Kart
+    - Stardew Valley
+    - A clickable Animal Crossing icon which shows a NookPhone where my favorite species of villagers are shown
 
-## Program
+This app is for mobile screens (made on size iPhone XR), and is mostly responsive.
 
-| Planning | Maandag               | Dinsdag                | Woensdag                           | Donderdag                   | Vrijdag                                   |
-|----------|-----------------------|------------------------|------------------------------------|-----------------------------|-------------------------------------------|
-|          | Kick-Off, Dev WebSite | Dev TeamApp, Workshops | Dev *, Weekly nerd                 | Dev *, Workshops            | Code review, Voortgangsgesprekken, Dev *  |
-|          | Dev *, Workshops      | College + Workshops    | Dev *, Weekly nerd, Deadline 23:59 | Mondeling, Weekly Nerd Blog | Reparatiegesprekken, Afsluiting, 🍻 Fest? |
+## Getting started
 
-## Rubric
+## Installation
+This project is built with Node.js and npm to install packages.
+To install this project:
 
-Je inzet wordt beoordeeld met behulp van de rubric (zie hieronder). Je moet het criterium (middenkolom) behalen om het
-vak te voltooien.
-Tijdens de toets wordt je mondeling overhoord en krijg je feedback over dingen die we denken dat tekort schieten en dingen die
-we denken dat een verbetering zijn op het criterium.
+### Cloning repo
 
-TBA
+#### HTTPS
+<code>git clone https://github.com/lainecedes/web-app-from-scratch-2324.git<code>
 
-[//]: # ()
-[//]: # (| Deficiency | Criterion                                                                                                                                                                              | Improvement |)
+#### SSH
+<code>git clone git@github.com:lainecedes/web-app-from-scratch-2324.git<code>
 
-[//]: # (|:-----------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------|)
+### Install Node.js and npm
+- <code>$ npm install</code>
+- <code>$ node install</code>
+- <code>$ node --version</code>
 
-[//]: # (|            | *User Interface* - you design, build and test the user interface by applying interface design principles                                                                               |             |)
+### Start application
+<code>$ npm start</code>
 
-[//]: # (|            | *Code structure* - you write modular, consistent and efficient HTML, CSS and JavaScript code by applying structure and best practices. You manage state for the application and the UI |             |)
+## Templating view engine
+This app uses the templating view engine EJS. (extra informatie over EJS)
 
-[//]: # (|            | *Data management* - you understand how you can work with an external API using asynchronous code. You can retrieve data, manipulate and dynamically convert it to structured html      |             |)
+# Data file
+This app uses a JSON data set and data retrieved from the Nookipedia API on the server side. For more information, browse the wiki page on the wiki.
 
-[//]: # (|            | *Project* - your app is working and published on GitHub Pages. Your project is thoroughly documented in the `README.md` file in your repository.                                       |             |)
+# License
+
+# Author
+Elaine Wilberforce
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
 
