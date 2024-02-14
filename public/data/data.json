@@ -1,6 +1,14 @@
 {
+    "firstName": "Elaine",
+	"lastName": "Wilberforce",
+	"avatar_url": "https://i.imgur.com/1u5Xzts.png",
+    "age": 22,
+    "city": "Amsterdam",
+    "hobbies" : ["Gaming", "Formula 1", "Music", "Skincare and beauty"],
+    "truthsAndLies" : ["My favorite food is Vietnamese", "I've dived head first in the Costa Brava sea once", "I have my drivers license"],
+    "favouriteAnimal" : "Beluga whale",
+
     "name": "Elaine",
-    "age": "22",
     "username": "lainecedes",
     "bio": "Hey en welkom op mijn pagina! Ik ben Elaine en mijn favoriete videogames zijn Stardew Valley, Animal Crossing en Mario Kart.",
     "switchCode": "SW-0538-7208-9985",
