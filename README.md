@@ -18,30 +18,34 @@ It has:
 
 This app is for mobile screens (made on size iPhone XR), and is mostly responsive.
 
-## Getting started
+# Getting started
 
-### Installation
+## Installation
 This project is built with Node.js and npm to install packages.
 To install this project:
-1. Clone your repo by using either HTTPS or SSH:
+
+### Cloning repo
+Clone your repo by using either HTTPS or SSH:
 <code>git clone https://github.com/lainecedes/web-app-from-scratch-2324.git<code>
 <code>git clone git@github.com:lainecedes/web-app-from-scratch-2324.git<code>
 
-2. Install Node.js and npm
+### Install Node.js and npm
 - <code>$ npm install</code>
 - <code>$ node install</code>
 - <code>$ node --version</code>
 
-3. Start application
+### Start application
 <code>$ npm start</code>
 
-## Templating view engine
+
+# Templating view engine
 This app uses the templating view engine EJS.
 
-## Data file
+
+# License
 This app uses a JSON data set and data retrieved from the Nookipedia API on the server side. For more information, browse the wiki page on the wiki: [Loading personal data and the Nookipedia API](https://github.com/lainecedes/web-app-from-scratch-2324/wiki/api)
 
-## Author
+# Author
 Elaine Wilberforce
 
 ## Sources
