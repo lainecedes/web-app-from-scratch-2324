@@ -27,7 +27,7 @@ button, summary {
 }
 
 
-/* code */
+/* general */
 
 body {
     background-image: url(/images/stardewbackground.png);
@@ -41,7 +41,12 @@ h1 {
     text-align: center;
 }
 
+
+
+
+/* --------------------------------- */
 /* Section 1 - avatar grid and icons */
+/* --------------------------------- */
 
 section:nth-of-type(1) {
     display: grid;
@@ -55,15 +60,22 @@ section:nth-of-type(1) {
     padding: 0 1.5em 0 1.5em;
 }
 
-section:nth-of-type(1) button img:nth-of-type(1) {
-    grid-area: avatar;
-    width: 80%;
-}
-
 section:nth-of-type(1) button {
     background: none;
     border: none;
 }
+
+section:nth-of-type(1) ul li button {
+    position: relative;
+    top: 0.4em;
+}
+
+section:nth-of-type(1) button img:nth-of-type(1) {
+    grid-area: avatar;
+    width: 80%;
+    cursor: url('/images/calendarflag.gif'), pointer;
+}
+
 
 section:nth-of-type(1) ul {
     grid-area: sidebar;
@@ -77,8 +89,8 @@ section:nth-of-type(1) ul {
     padding: 0;
 
     /* sizing ul */
-    width: 5em;
-    height: 17.9em;
+    width: 6em;
+    height: 18em;
     background-color: var(--color-orange);
     /* border: solid transparent; */
 
@@ -111,16 +123,24 @@ section:nth-of-type(1) ul li {
     list-style-type: none;
     text-decoration: none;
     height: 21%; 
-    /* height voor correctie lichte box shadow highlight */
+    /* height for correctie light box shadow highlight turned off due to issues */
 
-    box-shadow: inset 0 -0.3em 0 0 var(--pixel-highlight),
-                inset 0.3em 0 0 0 var(--pixel-highlight);
+    /* box-shadow: inset 0 -0.3em 0 0 var(--pixel-highlight),
+                inset 0.3em 0 0 0 var(--pixel-highlight); */
 }
+
 section:nth-of-type(1) ul li img:nth-of-type(1) {
     width: 3.2em;
 }
 
-/* Section 2 - Informatie */
+
+
+
+
+
+/* ---------------------------- */
+/* Section 2 - user information */
+/* ---------------------------- */
 
 section:nth-of-type(2) {
     display: grid;
@@ -170,30 +190,43 @@ section:nth-of-type(2) p:nth-of-type(3) {
 	grid-column-end: 5;
 }
 
+
+
+
+
+/* ---------------------- */
 /* section met letter bio */
+/* ---------------------- */
 
-section:nth-of-type(3) {
-    background: url(/images/letter-sprite.png);
-    background-size: cover;
-    padding: 1em;
-    padding-bottom: 3em;
-    margin: 1.5em;
+section:nth-of-type(3) dialog {
+    background:linear-gradient(to right, var(--color-orange) 50%, var(--color-orange-medium-gradient) 50%);
+    border: none;
 
-    position: fixed;
-    z-index: 1;
-
-    top: 5em;
-    bottom: 32em;
-    left: -1.5em;
-    right: -1em;
-
-    transform: translateX(150%);
+    /* pixel border effect */
+    box-shadow: -0.3em 0 0 0 var(--brown-pixel-border),
+     0.3em 0 0 0 var(--brown-pixel-border),
+     0 -0.3em 0 0 var(--brown-pixel-border),
+     0 0.3em 0 0 var(--brown-pixel-border),
+     
+    inset 0 -0.3em 0 0 var(--pixel-highlight),
+    inset 0.3em 0 0 0 var(--pixel-highlight)
+    ;
 }
 
-section:nth-of-type(3).buttonOpen {
-    transform: translateX(0%);
+section:nth-of-type(3) dialog::backdrop {
+    background-image: linear-gradient(45deg,magenta,rebeccapurple,dodgerblue,green);
+    background-size: 130% 130%;
+    opacity: 0.80;
 }
 
+section:nth-of-type(3) dialog button {
+    border: none;
+    background: none;
+}
+section:nth-of-type(3) dialog button img {
+    width: 2em;
+    height: 2em;
+}
 
 section:nth-of-type(3) p {
     font-family: "Pixelify Sans", sans-serif;
@@ -207,11 +240,30 @@ section:nth-of-type(4) {
     display: flex;
 }
 
+section:nth-of-type(4) #NookPhone {
+    padding: 1em;
+    margin: 1.5em;
+
+    position: absolute;
+    z-index: 1;
+
+    top: 10%;
+    left: 15%;
+    right: 0;
+    bottom: 0;
+    
+
+    transform: translateX(350%);
+}
+section:nth-of-type(4) #NookPhone.buttonOpen {
+    transform: translateX(0%);
+
+}
+
 /* child */
 section:nth-of-type(4) #NookPhone #container {
-    /* position: absolute;  */
     display: grid;
-
+    position: absolute;
     /* centreer phone */
     right: 1.4em;
 
@@ -221,11 +273,11 @@ section:nth-of-type(4) #NookPhone #container {
     background-color: var(--color-white);
     max-width:23em;
     height: 33em;
-    border-radius: 5em;
+    border-radius: 60px;
 }
 
 /* NookPhone cellular icon */
-section:nth-of-type(4) #NookPhone #container img:nth-of-type(1) {
+section:nth-of-type(4) #NookPhone #container > img:nth-of-type(1) {
     position: relative;
     top: 1.1em;
     left: 2.5em;
@@ -234,7 +286,7 @@ section:nth-of-type(4) #NookPhone #container img:nth-of-type(1) {
 }
 
 /* NookPhone location icon */
-section:nth-of-type(4) #NookPhone #container img:nth-of-type(2) {
+section:nth-of-type(4) #NookPhone #container > img:nth-of-type(2) {
     grid-column: 3/4;
 
     position: relative;
@@ -277,7 +329,7 @@ section:nth-of-type(4) #NookPhone #container ul {
     grid-column: 2/-2;
     grid-row: 3/4;
 
-    overflow-x: auto;
+    overflow: scroll;
     scroll-snap-align: center;
 	scroll-behavior: smooth;
 	scrollbar-width: none; /* Firefox */
@@ -289,9 +341,11 @@ section:nth-of-type(4) #NookPhone #container ul {
 
 section:nth-of-type(4) #NookPhone #container ul li {
     display: grid;
+    position: relative;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 2em 1fr 0.5fr 1fr;
+    grid-template-rows: 2em 1fr 0.5fr 0.5fr;
     gap: 1em;
+    left: -1.3em;
  
     text-decoration: none;
     list-style-type: none;
@@ -351,6 +405,21 @@ section:nth-of-type(4) #NookPhone #container ul li p:nth-of-type(5) {
     grid-row: 4/5;
  }
 
+ #container button {
+    border: none;
+    background: transparent;
+    grid-row: 4;
+    grid-column: 2/2;
+    margin-bottom: 1em;
+
+ }
+
+ #container button img:nth-of-type(1) {
+    width: 2em;
+    height: 2em;
+ }
+
+
 
  /* -------------- */
  /* responsiveness */
@@ -367,5 +436,24 @@ section:nth-of-type(4) #NookPhone #container ul li p:nth-of-type(5) {
         padding: 0;
         margin: 2em 8em 0 8em;
     }
-    
+
+    section:nth-of-type(1) ul li button img:nth-of-type(1) {
+    height: 160%;
+    width: 160%;
+    }
+
+    section:nth-of-type(4) #NookPhone {
+        background-color: var(--color-white);
+        top: 10%;
+        left: 10%;
+        right: 0;
+        bottom: 0;
+        
+        max-width:23em;
+        height: 33em;
+        border-radius: 5em;
+    }
+
   }
+
+  

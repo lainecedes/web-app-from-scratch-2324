@@ -1,21 +1,39 @@
-//  avatar klik en krijg bio informatie in letter tevoorschijn + menu close
-var openButton = document.querySelector("section:nth-of-type(1) button");
-var closeButton = document.querySelector("section:nth-of-type(3) button");
+//  avatar acts like a button to open the dialog
+const dialog = document.querySelector("section:nth-of-type(3) dialog");
+const openButton = document.querySelector("section:nth-of-type(1) button");
+const closeButton = document.querySelector("section:nth-of-type(3) dialog button");
 
-openButton.addEventListener("click", openLetter);
-closeButton.addEventListener("click", closeLetter);
+openButton.onclick="dialog.showModal()"
 
-function openLetter() {
-    var openClick = document.querySelector("section:nth-of-type(3)");
+// show bio on screen
+openButton.addEventListener("click", () => {
+    dialog.showModal();
+});
+  
+// close bio
+closeButton.addEventListener("click", () => {
+    dialog.close();
+});
+
+
+const openNookPhone = document.querySelector("section:nth-of-type(1) ul li button");
+const closeNookPhone = document.querySelector("section:nth-of-type(4) #NookPhone #container button");
+
+openNookPhone.addEventListener("click", openPhone);
+closeNookPhone.addEventListener("click", closePhone);
+
+function openPhone() {
+    var openClick = document.querySelector("section:nth-of-type(4) #NookPhone");
     openClick.classList.add("buttonOpen");
 }
 
-function closeLetter() {
-    var openClick = document.querySelector("section:nth-of-type(3)");
-    openClick.classList.remove("buttonOpen");
+function closePhone() {
+    var closeClick = document.querySelector("section:nth-of-type(4) #NookPhone");
+    closeClick.classList.remove("buttonOpen");
 }
 
 
+// fetch JSON data from data.json and render this in HTML
 function userInfo() {
     var userSection = document.getElementById("user");
     var bioSection = document.getElementById("bio");
@@ -40,22 +58,21 @@ function userInfo() {
         console.error('Error fetching data:', error);
     });
 
-    // misschien switch code erbij in de bio? kijk ff later
+    // maybe add switch code later
 }
 
 userInfo();
 
 
-//   Tijd op NookPhone laten zien
-
+//   show real time on NookPhone
 function currentPhoneTime() {
-    // haal actuele tijd op
+    // get the real time
     const now = new Date();
 
     const hours = now.getHours();
     const minutes = now.getMinutes();
 
-    // als minuten en uren minder zijn dan 10 dan 0 ervoor
+    // if minutes and hours number are less than 10, then add 0 in front
     const hour = hours < 10 ? "0" + hours : hours;
     const minute = minutes < 10 ? "0" + minutes : minutes;
     
@@ -69,15 +86,4 @@ function currentPhoneTime() {
 
 currentPhoneTime();
 
-// data fetch API
 
-document.getElementById('villagerButton').addEventListener('click', fetchData);
-
-
-
-function fetchData() {
-    fetch('http://localhost:3000/')
-      .then(response => response.json())
-      .then(data => displayData(data))
-      .catch(error => console.error('Error fetching data:', error));
-  }

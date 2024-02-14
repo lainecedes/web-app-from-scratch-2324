@@ -9,28 +9,26 @@
         <h1>lainecedes' Awesome Profile</h1>
         
         <section> <!-- lijst met favo game icons -->
-            <button>
-                <img src="/images/avatarpicture.png" alt="picture of avatar">
+            <button aria-label="Open biography of profile">
+                <img src="/images/avatarpicture.png" alt="Picture of avatar">
             </button>
 
             <ul>
                 <li>
                     <img src="/images/mariokarticon.png" alt="Mario Kart icon">
-                    <a href="#"></a>
                 </li>
                 <li>
-                    <img src="/images/mariokarticon.png" alt="Mario Kart icon">
-                    <a href="#"></a>
+                    <button aria-label="Open NookPhone">
+                        <img src="/images/tomnookacnh.jpg" alt="Animal Crossing New Horizons icon">
+                    </button>
                 </li>
                 <li>
-                    <img src="/images/mariokarticon.png" alt="Mario Kart icon">
-                    <a href="#"></a>
+                    <img src="/images/sdvicon.png" alt="Stardew Valley icon">
                 </li>
                 <li>
-                    <img src="/images/mariokarticon.png" alt="Mario Kart icon">
-                    <a href="#"></a>
+                    <!-- ISSUE: if image is removed then interface collapses? -->
+                    <img src="/images/transparent.png" alt="Transparent placeholder image">
                 </li>
-                
             </ul>
         </section>
 
@@ -40,18 +38,21 @@
             <p id="userUsername"></p>
         </section>
 
-        <section> <!-- bio letter w/ JSON data -->
-            <button>Sluiten</button> 
-            <p id="userBio"></p>
+        <section> 
+            <dialog> <!-- bio letter w/ JSON data -->
+                <button aria-label="Close" autofocus>
+                    <img src="/images/pixel-close.png"></button> 
+                <p id="userBio"></p>
+            </dialog>
         </section>
 
         <section>
             <!-- NookPhone -->
             <div id="NookPhone">
                 <!-- interface phone -->
-                <div id="container">
-                    <img src="/images/cellular_status.png" alt="Cellular status of NookPhone">
-                    <img src="/images/location_status.png" alt="Cellular status of NookPhone">
+                <div aria-label="NookPhone" id="container">
+                    <img src="/images/cellular_status.png" alt="Cellular status of NookPhone icon">
+                    <img src="/images/location_status.png" alt="Location status of NookPhone icon">
                     <!-- Current time -->
                     <p id="screenTime"></p>
                     <p>Capelle Town Bunnies</p>
@@ -66,7 +67,10 @@
                                 <p><%= villager.quote %></p>
                             </li>
                         <% }); %>
-                        </ul>
+                    </ul>
+                    <button aria-label="Close dialog">
+                        <img src="/images/phone-close.png" alt="Pixelated close icon">
+                    </button>
                 </div>
         </div>
         </section>
