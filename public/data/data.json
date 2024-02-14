@@ -1,7 +1,7 @@
 {
     "firstName": "Elaine",
 	"lastName": "Wilberforce",
-	"avatar_url": "https://i.imgur.com/1u5Xzts.png",
+	"avatar_url": "https://i.pinimg.com/originals/96/42/0c/96420c7fef472a2e0409aba214f11117.jpg",
     "age": 22,
     "city": "Amsterdam",
     "hobbies" : ["Gaming", "Formula 1", "Music", "Skincare and beauty"],
@@ -10,8 +10,9 @@
 
     "name": "Elaine",
     "level": 22,
-    "username": "lainecedes",
+    "username": "@lainecedes",
     "bio": "Hey en welkom op mijn pagina! Ik ben Elaine en mijn favoriete videogames zijn Stardew Valley, Animal Crossing en Mario Kart.",
-    "switchCode": "SW-0538-7208-9985",
-    "favorite_game": ["Stardew Valley", "Animal Crossing", "Mario Kart"]
+    "favorite_game": ["Stardew Valley", "Animal Crossing", "Mario Kart"],
+    "switchCode": "SW-0538-7208-9985"
+    
 }
