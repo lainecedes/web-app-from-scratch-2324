@@ -25,9 +25,8 @@ This project is built with Node.js and npm to install packages.
 To install this project:
 
 ### Cloning repo
-Clone your repo by using either HTTPS or SSH:
+Clone your repo by using HTTPS:
 <code>git clone https://github.com/lainecedes/web-app-from-scratch-2324.git<code>
-<code>git clone git@github.com:lainecedes/web-app-from-scratch-2324.git<code>
 
 ### Install Node.js and npm
 - <code>$ npm install</code>
